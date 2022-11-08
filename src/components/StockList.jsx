@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react"
 import { useNavigate } from "react-router-dom"
-import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs"
+import { BsFillCaretDownFill, BsFillCaretUpFill, BsFillArchiveFill } from "react-icons/bs"
 import finnHub from "../apis/finnHub"
 import { WatchListContext } from "../context/watchListContext"
 
@@ -58,7 +58,7 @@ export const StockList = () => {
   }
   
   return <div className="container">
-    <table className="table hover mt-5">
+    <table className="table hover">
       <thead style={{ color: "rgb(79,89,102)" }}>
         <tr>
           <th scope="col">Name</th>
@@ -69,6 +69,7 @@ export const StockList = () => {
           <th scope="col">Low</th>
           <th scope="col">Open</th>
           <th scope="col">Pclose</th>
+          <th scope="col">Remove</th>
         </tr>
       </thead>
       <tbody>
@@ -87,7 +88,7 @@ export const StockList = () => {
               <td> <button className="btn btn-danger btn-sm ml-3 d-imline-block delete-button" onClick={(e) => {
                 e.stopPropagation()
                 deleteStock(stockData.symbol)
-              }}>Remove</button></td>
+              }}><BsFillArchiveFill /></button></td>
             </tr>
           )
         })}

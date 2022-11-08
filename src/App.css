@@ -12,3 +12,11 @@
 .table-row:hover .delete-button {
   visibility: visible;
 }
+
+.logo {
+  width: 150px;
+  height: 80px;
+  margin: 70px 0px 0px 0px;
+}
+
+
