@@ -1,0 +1,14 @@
+/* main {
+  text-align: center;
+  vertical-align: center;
+  line-height: 100vh
+} */
+
+.delete-button {
+  visibility: hidden;
+  display: inline-block;
+}
+
+.table-row:hover .delete-button {
+  visibility: visible;
+}
